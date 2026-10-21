@@ -10,7 +10,7 @@ EXPOSE 5001
 
 COPY 1_12 .
 
-ENV BACKEND_URL=http://localhost:8080
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
 
 RUN npm install
 
