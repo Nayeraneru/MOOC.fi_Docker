@@ -8,12 +8,13 @@ RUN apt-get update && apt-get install -y curl \
 
 Expose 5001
 
-COPY . .
-
 RUN npm install
 
-RUN npm run build 
- 
 RUN npm install -g serve
+
+COPY . .
+
+RUN npm run build 
+
 
 CMD ["serve", "-s", "-l", "5001", "build"]
