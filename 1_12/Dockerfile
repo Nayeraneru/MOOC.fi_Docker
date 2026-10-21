@@ -8,11 +8,11 @@ RUN apt-get update && apt-get install -y curl \
 
 EXPOSE 5001
 
+COPY . .
+
 RUN npm install
 
 RUN npm install -g serve
-
-COPY . .
 
 RUN npm run build 
 
